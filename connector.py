@@ -1,7 +1,9 @@
 import socket
 import struct
 
-class Connector:
+# Based on Valve Developer Community WIKI: https://developer.valvesoftware.com/wiki/Server_queries
+
+class Querier:
     def __init__(self, ip, port):
         self.ip = ip
         self.port = port
@@ -123,6 +125,3 @@ class Connector:
 
 
         
-a = Connector("5.75.164.134", 27015)
-f = a.info()
-print(f)
