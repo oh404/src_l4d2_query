@@ -1,5 +1,17 @@
-import connector
+import querier
 
-a = connector.Querier("5.75.164.134", 27015)
-f = a.info()
-print(f)
+host = querier.Querier("74.91.124.246", 27015)
+
+# request playerlist and playtime:
+print("PLAYERLIST")
+players = host.players()
+
+print("==========")
+print("GAMEINFO:")
+# request gameinfo:
+gameinfo = host.info()
+
+print("==========")
+print("CVARS:")
+# request cvars:
+cvars = host.convars()
